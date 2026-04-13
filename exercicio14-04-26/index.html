@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Site Davi e Pedro</h1>
+    <p id="texto">Texto 1</p>
+
+    <button onclick="mudarTexto()">Clique aqui</button>
+
+    <script>
+        function mudarTexto() {
+            let elemento = document.getElementById("texto");
+
+            if (elemento.innerText === "Texto 1") {
+                elemento.innerText = "Texto 2!";
+            } else {
+                elemento.innerText = "Texto 1";
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+<!---
+    1) O que é DOM? O DOM (Document Object Model) é a interface que transforma o HTML em uma estrutura de objetos que o JavaScript consegue manipular. Enquanto o HTML é um arquivo de texto estático, o DOM é a representação "viva" da página no navegador.
+
+    2) O que é um nó (node)? É a unidade básica da árvore do DOM; elementos são as tags HTML, atributos são as propriedades dessas tags (como class ou id) e textos são os conteúdos escritos dentro delas.
+
+    3) Explique os métodos: O getElementById() busca um elemento pelo seu ID único; o querySelector() seleciona o primeiro item que corresponde a um seletor CSS; e o querySelectorAll() retorna uma lista com todos os elementos encontrados.
+
+    4) Diferença entre innerHTML e innerText: O innerHTML interpreta e renderiza tags HTML contidas em uma string, enquanto o innerText lida apenas com o texto bruto, ignorando qualquer formatação de código.
+
+    5) O que são eventos? São gatilhos disparados por ações do usuário, como o onclick (clique do mouse), o onchange (alteração de um valor em formulários) e o onmouseover (quando o mouse passa sobre um elemento).-->
