@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 27/04/2026</title>
+</head>
+<body>
+    <h1>Exercício 1</h1>
+        <input type="text" id="input1" placeholder="">
+        <button onclick="mostrarTexto()">Mostrar</button>
+        <p id="p1"></p>
+
+        <script>
+        function mostrarTexto() {
+        let texto = document.getElementById("input1").value;
+        document.getElementById("p1").innerText = texto;
+        }
+        </script>
+
+    <h1>Exercico 2</h1>
+        <input type="text" id="nome" placeholder="Insira seu Nome">
+        <button onclick="saudar()">Saudar</button>
+
+        <script>
+        function saudar() {
+        let nome = document.getElementById("nome").value;
+        alert("Olá, " + nome + "!");
+        }
+        </script>
+    <h1>Exercicio 3</h1>
+    <input type="number" id="idade" placeholder="Insira sua idade">
+    <button onclick="verificarIdade()">Verificar</button>
+    <p id="resIdade"></p>
+    
+    <script>
+    function verificarIdade() {
+      let idade = document.getElementById("idade").value;
+      let res = document.getElementById("resIdade");
+    
+      if (idade >= 18) {
+        res.innerText = "Maior de idade";
+      } else {
+        res.innerText = "Menor de idade";
+      }
+    }
+    </script>
+
+    <h1>Exercicio 4</h1>
+        <button onclick="mudarCor()">Mudar Cor</button>
+
+<script>
+function mudarCor() {
+  document.body.style.backgroundColor = "lightblue";
+}
+</script>
+
+<h1>Exercico 5</h1>
+
+<button onclick="modoEscuro()">Modo Escuro/Claro</button>
+
+<script>
+let escuro = false;
+
+function modoEscuro() {
+  if (escuro) {
+    document.body.style.backgroundColor = "white";
+    document.body.style.color = "black";
+  } else {
+    document.body.style.backgroundColor = "black";
+    document.body.style.color = "white";
+  }
+  escuro = !escuro;
+}
+</script>
+
+<h1>Exercicio 6</h1>
+<input type="text" id="item" placeholder="Lista">
+<button onclick="adicionar()">Adicionar</button>
+<ul id="lista"></ul>
+
+<script>
+function adicionar() {
+  let texto = document.getElementById("item").value;
+  let li = document.createElement("li");
+  li.innerText = texto;
+  document.getElementById("lista").appendChild(li);
+}
+</script>
+
+<h1>exercicio 7</h1>
+<ul id="lista2">
+    <li onclick="remover(this)">clique para remover o item</li>
+    <li onclick="remover(this)">Item 1</li>
+    <li onclick="remover(this)">Item 2</li>
+  </ul>
+  
+  <script>
+  function remover(elemento) {
+    elemento.remove();
+  }
+  </script>
+
+<h1>exercicio 8</h1>
+<input type="number" id="numero" placeholder="Par ou não par?">
+<button onclick="parOuImpar()">Verificar</button>
+<p id="resNum"></p>
+
+<script>
+function parOuImpar() {
+  let n = document.getElementById("numero").value;
+  let res = document.getElementById("resNum");
+
+  if (n % 2 == 0) {
+    res.innerText = "Par";
+  } else {
+    res.innerText = "Ímpar";
+  }
+}
+</script>
+
+<h1>exercicio 9</h1>
+<input type="password" id="senha" placeholder="Insira a Senha:">
+<button onclick="validar()">Validar</button>
+<p id="resSenha"></p>
+
+<script>
+function validar() {
+  let senha = document.getElementById("senha").value;
+  let res = document.getElementById("resSenha");
+
+  if (senha.length >= 6) {
+    res.innerText = "Senha válida";
+  } else {
+    res.innerText = "Mínimo 6 caracteres";
+  }
+}
+</script>
+</body>
+</html>
